@@ -2,7 +2,7 @@
 // Open Source Software; you can modify and/or share it under the terms of
 // the WPILib BSD license file in the root directory of this project.
 
-package frc;
+package frc.robot;
 
 import edu.wpi.first.wpilibj.Controller;
 import edu.wpi.first.wpilibj.Joystick;
@@ -22,6 +22,5 @@ public class Drive {
 
     public void operationalDrive() {
         m_robotDrive.tankDrive(-m_stick.getRawAxis(1) * 0.6, m_stick.getRawAxis(3) * 0.6);
-
     }
 }

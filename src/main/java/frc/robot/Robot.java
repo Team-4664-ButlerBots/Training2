@@ -8,9 +8,6 @@ package frc.robot;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.motorcontrol.Victor;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
-
-import java.util.Scanner;
-
 import edu.wpi.first.wpilibj.Joystick;
 
 
@@ -21,11 +18,7 @@ import edu.wpi.first.wpilibj.Joystick;
  * project.
  */
 public class Robot extends TimedRobot {
-private final Victor m_leftDrive = new Victor(6);
-private final Victor m_rightDrive = new Victor(7);
-private final DifferentialDrive m_robotDrive = new DifferentialDrive(m_leftDrive, m_rightDrive); 
-private final Joystick m_stick = new Joystick(0);
-
+  Drive testDrive = new Drive();
 //private final Timer m_timer = new Timer();
 /**
    * This function is run when the robot is first started up and should be used for any
@@ -73,7 +66,7 @@ private final Joystick m_stick = new Joystick(0);
   /** This function is called periodically during operator control. */
   @Override
   public void teleopPeriodic() {
-    m_robotDrive.tankDrive(-m_stick.getRawAxis(1) * 0.6, m_stick.getRawAxis(3) * 0.6);
+    testDrive.operationalDrive();
   }
 
   /** This function is called once when the robot is disabled. */
@@ -91,4 +84,5 @@ private final Joystick m_stick = new Joystick(0);
   /** This function is called periodically during test mode. */
   @Override
   public void testPeriodic() {}
+  
 }
