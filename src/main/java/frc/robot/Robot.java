@@ -6,10 +6,6 @@ package frc.robot;
 
 
 import edu.wpi.first.wpilibj.TimedRobot;
-import edu.wpi.first.wpilibj.motorcontrol.Victor;
-import edu.wpi.first.wpilibj.drive.DifferentialDrive;
-import edu.wpi.first.wpilibj.Joystick;
-
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
@@ -66,6 +62,7 @@ public class Robot extends TimedRobot {
   /** This function is called periodically during operator control. */
   @Override
   public void teleopPeriodic() {
+    testDrive.speed();
     testDrive.operationalDrive();
   }
 
