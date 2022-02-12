@@ -17,6 +17,7 @@ import edu.wpi.first.wpilibj.TimedRobot;
 public class Robot extends TimedRobot {
   Controller cManager = new Controller();
   Drive testDrive = new Drive(cManager);
+  FlyWheel testFlyWheels = new FlyWheel(cManager);
 //private final Timer m_timer = new Timer();
 /**
    * This function is run when the robot is first started up and should be used for any
@@ -64,8 +65,8 @@ public class Robot extends TimedRobot {
   /** This function is called periodically during operator control. */
   @Override
   public void teleopPeriodic() {
-    testDrive.speed();
     testDrive.operationalDrive();
+    testFlyWheels.operationalWheels();
   }
 
   /** This function is called once when the robot is disabled. */

@@ -22,12 +22,14 @@ public class Drive {
     }
 
     public void operationalDrive() { 
+        speed();
         m_robotDrive.tankDrive(Manager.getLeftAxis() * speedMultiplier, Manager.getRightAxis() * speedMultiplier);
     }
 
-    public void speed(){
-        boolean buttonPressed = Manager.getSpeedToggle();
-        if (buttonPressed){
+    //changes speedMultiplier by checking if button 1 is pressed...?
+    public void speed(){                    //is constantly ran in Robot class
+        boolean buttonPressed1 = Manager.getSpeedToggle();
+        if (buttonPressed1){
             if (speedMultiplier == 0.5)
                 speedMultiplier = 0.8;
             else
