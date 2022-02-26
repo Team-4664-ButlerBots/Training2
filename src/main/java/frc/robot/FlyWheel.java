@@ -19,6 +19,7 @@ public class FlyWheel {
         leftWheelC.set(speed);
         rightWheelC.set(speed);
     }
+    
     int state = 0;
     int speedMult = 0;
     public void speed(){
